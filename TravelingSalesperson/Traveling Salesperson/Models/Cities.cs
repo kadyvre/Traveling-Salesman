@@ -6,13 +6,25 @@ using System.Threading.Tasks;
 
 namespace CodingActivity_TheTravelingSalesperson.Solution.Models
 {
-    class Cities
+    public class Cities
     {
         private List<string> _cities;
 
-        public List<string> ListofCities
+        //public List<string> cityList
+        //{
+        //    get { return _cities; }
+        //    set { _cities = cityList; }
+        //}
+        public Cities()
         {
-
+            _cities = new List<string>();
+            _cities.Add("Lansing");
+            _cities.Add("Detroit");
+            _cities.Add("Traverse City");
+            _cities.Add("Jackson");
         }
+
+
     }
 }
+

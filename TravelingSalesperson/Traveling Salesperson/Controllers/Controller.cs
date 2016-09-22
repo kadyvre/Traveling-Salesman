@@ -90,6 +90,14 @@ namespace CodingActivity_TheTravelingSalesperson
                 {
                     case MenuOption.None:
                         break;
+                    case MenuOption.Sell:
+                        int numberOfUnitsToSell = _consoleView.DisplayGetNumberOfUnitsToSell();
+                        _salesperson.ProductUnits -= numberOfUnitsToSell;
+                        break;
+                    case MenuOption.Buy:
+                        int numberOfUnitsToAdd = _consoleView.DisplayGetNumberOfUnitsToBuy();
+                        _salesperson.ProductUnits += numberOfUnitsToAdd;
+                        break;
                     case MenuOption.DisplayAccountInfo:
                         _consoleView.DisplayAccountInfo();
                         break;

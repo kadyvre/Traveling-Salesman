@@ -92,7 +92,7 @@ namespace CodingActivity_TheTravelingSalesperson
 
             ConsoleUtil.DisplayReset();
 
-            ConsoleUtil.DisplayMessage("- add welcome message -");
+            ConsoleUtil.DisplayMessage("- Welcome to the Traveling Salesperson -");
             Console.WriteLine();
 
             sb.Clear();
@@ -116,19 +116,43 @@ namespace CodingActivity_TheTravelingSalesperson
             ConsoleUtil.DisplayMessage("Setup your account now.");
             Console.WriteLine();
 
-            ConsoleUtil.DisplayPromptMessage("Enter your first name: ");
+            ConsoleUtil.DisplayPromptMessage("What is your first name? ");
             _salesperson.FirstName = Console.ReadLine();
             Console.WriteLine();
 
-            ConsoleUtil.DisplayPromptMessage("Enter your last name: ");
+            ConsoleUtil.DisplayPromptMessage("What is your last name? ");
             _salesperson.LastName = Console.ReadLine();
             Console.WriteLine();
 
-            ConsoleUtil.DisplayPromptMessage("Enter your age: ");
-            _salesperson.Age = int.Parse(Console.ReadLine());
+            // Age validation
+            int age;
+            bool validAge = false;
+
+            while (!validAge)
+            {
+                ConsoleUtil.DisplayPromptMessage("How old are you? ");
+                if (int.TryParse(Console.ReadLine(), out age))
+                {
+                    if (age > 0 && age < 130)
+                    {
+                        _salesperson.Age = age;
+                        validAge = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Come on now, this isn't that hard...");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter your age as a number between 0 and 130 (1, 2, 3, etc...)");
+                }
+            }
+            //End of age validation
+
             Console.WriteLine();
 
-            ConsoleUtil.DisplayPromptMessage("Enter your account ID: ");
+            ConsoleUtil.DisplayPromptMessage("Make an account ID ");
             _salesperson.Accountnumber = Console.ReadLine();
             Console.WriteLine();
 
@@ -175,9 +199,9 @@ namespace CodingActivity_TheTravelingSalesperson
                 ConsoleUtil.DisplayMessage("Please type the number of your menu choice.");
                 Console.WriteLine();
                 Console.WriteLine(
-                    "/t" + "3. Display rugs in stock" + Environment.NewLine +
-                    "/t" + "4. Travel to a new city" + Environment.NewLine +
-                    "/t" + "5. Display cities traveled to" + Environment.NewLine +
+                    "\t" + "3. Display rugs in stock" + Environment.NewLine +
+                    "\t" + "4. Travel to a new city" + Environment.NewLine +
+                    "\t" + "5. Display cities traveled to" + Environment.NewLine +
                     "\t" + "6. Display Account Info" + Environment.NewLine +
                     "\t" + "E. Exit" + Environment.NewLine);
 
@@ -232,11 +256,13 @@ namespace CodingActivity_TheTravelingSalesperson
             ConsoleUtil.DisplayReset();
 
             Console.WriteLine("Choose the next city",
-                "/t" + "1. Toronto" + Environment.NewLine +
-                "/t" + "2. Detroit" + Environment.NewLine +
-                "/t" + "3. New York" + Environment.NewLine);
+                "\t" + "1. Toronto" + Environment.NewLine +
+                "\t" + "2. Detroit" + Environment.NewLine +
+                "\t" + "3. New York" + Environment.NewLine);
 
             nextCity = Console.ReadLine();
+
+            DisplayContinuePrompt();
 
             return nextCity;
         }
@@ -251,6 +277,11 @@ namespace CodingActivity_TheTravelingSalesperson
 
             ConsoleUtil.HeaderText = "Buy Inventory";
             ConsoleUtil.DisplayReset();
+
+            Console.Write("How many units would you like to buy?");
+            numberOfUnitsToAdd = int.Parse(Console.ReadLine());
+
+            DisplayContinuePrompt();
 
             return numberOfUnitsToAdd;
         }
@@ -307,10 +338,10 @@ namespace CodingActivity_TheTravelingSalesperson
             ConsoleUtil.HeaderText = "Account Info";
             ConsoleUtil.DisplayReset();
 
-            Console.WriteLine("First Name: " + _salesperson.FirstName,
-            "/t" + "Last Name: " + _salesperson.LastName + Environment.NewLine +
-            "/t" + "Age: " + _salesperson.Age + Environment.NewLine +
-            "/t" + "Account ID: " + _salesperson.Accountnumber + Environment.NewLine);
+            Console.WriteLine("First Name: " + _salesperson.FirstName);
+            Console.WriteLine("Last Name: " + _salesperson.LastName);
+            Console.WriteLine("Age: " + _salesperson.Age);
+            Console.WriteLine("Account ID: " + _salesperson.Accountnumber);
 
             DisplayContinuePrompt();
         }

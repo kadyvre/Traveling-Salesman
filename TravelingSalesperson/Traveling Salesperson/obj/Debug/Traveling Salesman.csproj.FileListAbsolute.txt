@@ -1,2 +1,8 @@
 C:\Users\holm6\Downloads\s\CodingActivity_TheTravelingSalesperson.Starter-master\CodingActivity_TheTravelingSalesperson.Starter-master\CodingActivity_TheTravelingSalesperson.Starter\obj\Debug\CodingActivity_TheTravelingSalesperson.Solution.exe
 C:\Users\holm6\Downloads\s\CodingActivity_TheTravelingSalesperson.Starter-master\CodingActivity_TheTravelingSalesperson.Starter-master\CodingActivity_TheTravelingSalesperson.Starter\obj\Debug\CodingActivity_TheTravelingSalesperson.Solution.pdb
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\bin\Debug\CodingActivity_TheTravelingSalesperson.Solution.exe.config
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\bin\Debug\CodingActivity_TheTravelingSalesperson.Solution.exe
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\bin\Debug\CodingActivity_TheTravelingSalesperson.Solution.pdb
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\obj\Debug\CodingActivity_TheTravelingSalesperson.Solution.exe
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\obj\Debug\CodingActivity_TheTravelingSalesperson.Solution.pdb
+C:\Users\holm6\Downloads\TravelingSalesperson\Traveling Salesperson\obj\Debug\Traveling Salesman.csprojResolveAssemblyReference.cache
